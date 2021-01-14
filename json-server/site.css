@@ -1,0 +1,44 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin-top: 65px;
+}
+
+#navbar-top{
+    background-color: #070707;
+}
+
+#a-ban{
+    pointer-events: none;
+}
+
+.col-md-2{
+    background-color: #ccc;
+    height: 600px; 
+
+}
+
+#left-content{
+    margin-top: 20px;
+}
+
+.list-group{
+    padding-left: 0;
+    padding-bottom: 15px;
+}
+
+#panel-group{
+    margin-top: 20px;
+}
+
+.editor{
+    margin-bottom: 10px;
+}
+
+input{
+    height: 30px;
+}

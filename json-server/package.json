@@ -1,0 +1,14 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "json-server --watch data.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-serve": "^0.1.0"
+  }
+}

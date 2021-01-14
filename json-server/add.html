@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单管理系统</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="main.js"></script>
+</head>
+<body>
+    <!--顶部导航栏-->
+    <nav class="navbar navbar-expand navbar-fixed-top" id="navbar-top">
+        <a class="navbar-brand" href="#" id="a-ban" >订单管理系统</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">功能</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="query.html">订单查询</a>
+                        <a class="dropdown-item" href="update.html">订单管理</a>
+                        <a class="dropdown-item" href="add.html">订单增加</a>
+                        <a class="dropdown-item" href="delete.html">订单删除</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--右侧导航栏-->
+            <div class="col-md-2">
+                <div class="text-center" id="left-content">
+                    <div class="list-group">
+                        <a href="index.html" class="list-group-item">首页</a>
+                    </div>
+                    <div class="list-group">
+                        <a href="query.html" class="list-group-item">订单查询</a>
+                        <a href="update.html" class="list-group-item" >订单管理</a>
+                        <a href="add.html" class="list-group-item active" >订单增加</a>
+                        <a href="delete.html" class="list-group-item">订单删除</a>
+                    </div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">设置</a>
+                        <a href="#" class="list-group-item">帮助</a>
+                    </div>
+                </div>
+            </div>
+            <!--内容-->
+            <div class="col-md-10">
+                <h2>管理控制台</h2>
+                <hr>
+
+                <div id="panel-group">
+                    <!-- 1 选项 -->
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div id="editor1" class="editor">
+                                <label for="id">订单号</label>
+                                <input type="text" name="id" id="id">
+                            </div>
+                            <div id="editor2" class="editor">
+                                <label for="name">产品&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div id="editor3" class="editor">
+                                <label for="amount">数量&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="amount" id="amount">
+                            </div>
+                            <!--状态默认为待审核-->
+                            <div id="editor4" class="editor">
+                                <label for="cost">总花费</label>
+                                <input type="text" name="cost" id="cost">
+                            </div>
+                            <div id="editor5" class="editor">
+                                <label for="salesman">业务员</label>
+                                <input type="text" name="salesman" id="salesman">
+                            </div>
+                            <button type="button" class="btn btn-primary" id="add" onclick="add()">添加</button>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <!-- 2 最新订单 -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">所有订单</h3>	
+                        </div>
+                        <div class="panel-body">
+                            <table class="table" id="table">
+                                <thead>
+                                    <tr>
+                                        <th>订单号</th>
+                                        <th>产品</th>
+                                        <th>数量</th>
+                                        <th>总金额</th>
+                                        <th>状态</th>
+                                        <th>业务员</th>
+                                    </tr>
+                                </thead>
+                                <script>
+                                    getinfo("table");
+                                </script>  
+                            </table>
+                        </div>
+                    </div>    
+                </div>               
+            </div>
+        </div>           
+    </div>
+</body>
+</html>

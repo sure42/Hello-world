@@ -1,0 +1,28 @@
+{
+  "info": [
+    {
+      "name": "Apple Macbook air",
+      "id": "20210121",
+      "amount": "12",
+      "check": "通过",
+      "cost": "80000",
+      "salesman": "王五"
+    },
+    {
+      "id": "20210122",
+      "name": "Apple phone",
+      "amount": "5",
+      "check": "待审核",
+      "cost": "50000",
+      "salesman": "张三"
+    },
+    {
+      "name": "小米11",
+      "id": "20210123",
+      "amount": "10",
+      "check": "不通过",
+      "cost": "20000",
+      "salesman": "李四"
+    }
+  ]
+}
